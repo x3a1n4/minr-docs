@@ -1,1 +1,28 @@
 site_name: Minr Docs
+site_url: https://x3a1n4.github.io/minr-docs
+repo_url: https://github.com/x3a1n4/minr-docs
+plugins:
+  - tags
+  - search
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+    tag:
+      default: material/tag
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra:
+  tags:
+    Mapmaking: mapmaking
+    Scripting: scripting
