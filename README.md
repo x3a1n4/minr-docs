@@ -4,4 +4,5 @@ This is a [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) si
 ## Contributing
 - Install Material for MkDocs
 - Fork this repo
-- That should be it
+- Add a subrepository in `./docs`
+- Create a PR
