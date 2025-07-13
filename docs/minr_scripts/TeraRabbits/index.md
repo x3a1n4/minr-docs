@@ -1,6 +1,6 @@
 <!-- minrdocs:mapping -->
 <!-- minrscript:name TeraRabbits -->
-<!-- minrscript:description A small implementation of many worldedit + axiom features I like -->
+<!-- minrscript:description Minr scripts for many worldedit + axiom features I like -->
 
 ![Image title](images/thisisalsoaheaderimage.png){ align=left }
 
