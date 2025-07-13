@@ -1,0 +1,42 @@
+.md-typeset .minr-docs-badge {
+  font-size: 0.85em;
+}
+.md-typeset .minr-docs-badge--map {
+  --md-typeset-a-color: rgb(49, 143, 18);
+  --md-accent-fg-color: rgb(21, 75, 3);
+  --md-accent-fg-color--transparent: rgba(64, 129, 43, 0.3);
+  color: rgb(49, 143, 18);
+}
+.md-typeset .minr-docs-badge--script {
+  --md-typeset-a-color: rgb(16, 107, 150);
+  --md-accent-fg-color: rgba(0, 30, 85);
+  --md-accent-fg-color--transparent: rgba(0, 63, 114, 0.3);
+  color: rgb(16, 107, 150);
+}
+.md-typeset .minr-docs-badge--internal {
+  --md-typeset-a-color: rgb(41, 41, 41);
+  --md-accent-fg-color: rgb(41, 41, 41);
+  --md-accent-fg-color--transparent: rgba(54, 54, 54, 0.1);
+  color: rgb(41, 41, 41);
+}
+.md-typeset .minr-docs-badge--right {
+  float: right;
+  margin-left: 0.35em;
+}
+.md-typeset .minr-docs-badge__icon {
+  padding: 4px;
+  background: var(--md-accent-fg-color--transparent);
+  border-start-start-radius: 2px;
+  border-end-start-radius: 2px;
+}
+.md-typeset .minr-docs-badge__icon:last-child {
+  border-radius: 2px;
+}
+.md-typeset .minr-docs-badge__text {
+  padding: 4px 6px;
+  border-start-end-radius: 2px;
+  border-end-end-radius: 2px;
+  box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+}
+
+/*# sourceMappingURL=badges.css.map */

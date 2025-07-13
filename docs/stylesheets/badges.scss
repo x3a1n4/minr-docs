@@ -1,0 +1,61 @@
+.md-typeset {
+  // Badges
+  .minr-docs-badge {
+    font-size: 0.85em;
+
+    // Badge for mapping
+    &--map {
+      --md-typeset-a-color:              rgb(49, 143, 18);
+      --md-accent-fg-color:              rgb(21, 75, 3);
+      --md-accent-fg-color--transparent: rgba(64, 129, 43, 0.3);
+
+      color: rgb(49, 143, 18);
+    }
+
+    // Badge for scripting
+    &--script {
+      --md-typeset-a-color:              rgb(16, 107, 150);
+      --md-accent-fg-color:              rgba(0, 30, 85);
+      --md-accent-fg-color--transparent: rgba(0, 63, 114, 0.3);
+
+      color: rgb(16, 107, 150);
+    }
+
+    // Badge for internal
+    &--internal {
+      --md-typeset-a-color:              rgb(41, 41, 41);
+      --md-accent-fg-color:              rgb(41, 41, 41);
+      --md-accent-fg-color--transparent: rgba(54, 54, 54, 0.1);
+
+      color: rgb(41, 41, 41);
+    }
+
+    // Badge moved to the right
+    // Unsure if this is used
+    &--right {
+      float: right;
+      margin-left: 0.35em;
+    }
+
+    // Badge icon
+    &__icon {
+      padding: 4px;
+      background: var(--md-accent-fg-color--transparent);
+      border-start-start-radius: 2px;
+      border-end-start-radius: 2px;
+
+      // If icon is alone, round corners
+      &:last-child {
+        border-radius: 2px;
+      }
+    }
+
+    // Badge text
+    &__text {
+      padding: 4px 6px;
+      border-start-end-radius: 2px;
+      border-end-end-radius: 2px;
+      box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+    }
+  }
+}
