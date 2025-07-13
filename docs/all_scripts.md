@@ -17,10 +17,4 @@ This symbol denotes that a namespace, class, or function is used internally and 
 ## All Projects
 <!-- See https://github.com/squidfunk/mkdocs-material/discussions/6724 for proper tagging-->
 
-<!-- minrdocs:project-list-->
-
-### <!-- minrdocs:mapping --> [teraRabbits](example/example.md) { data-toc-label="teraRabbits" }
-- A small implementation of many worldedit + axiom features I like    
-
-### <!-- minrdocs:scripting --> [stringHashMap](example/example.md) { data-toc-label="stringHashMap" }
-- A quick and dirty string-string hashmap    
+<!-- minrdocs:projectlist -->

@@ -1,5 +1,7 @@
 # Minr Docs
-This is a [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) site for documenting useful Minr tools
+This is a [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) site for documenting useful Minr tools.
+
+Check out the site [here](https://x3a1n4.github.io/minr-docs/)
 
 ## Contributing
 - Install Material for MkDocs

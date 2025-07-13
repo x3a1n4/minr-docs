@@ -1,3 +1,4 @@
+import glob
 import re
 import posixpath
 from re import Match
@@ -14,7 +15,7 @@ def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: 
         args = args.strip()
         
         # Generate project list from files
-        if type == "project-list":      return _show_project_list(args, page, files)
+        if type == "projectlist":      return _show_project_list(args, page, config, files)
         # Tag to indicate a namespace is designed for mapmakers, scripters, or internal
         elif type == "mapping":    return _badge_for_maps(args, page, files)
         # Tag to indicate a namespace is designed for 
@@ -88,11 +89,50 @@ def _badge_for_internal(text: str, page: Page, files: Files):
         text = "Internal",
         type = "internal"
     )
-    
+
+# -----------------------------------------------------------------------------
     
 # Create project list
-def _show_project_list(text: str, page: Page, files: Files):
-    spec = text
-    path = f"changelog/index.md#{spec}"
+def _show_project_list(text: str, page: Page, config: MkDocsConfig, files: Files):
+    
+    # For each folder in minr_scripts
+    # Create the following (example)
+    """
+    ### <!-- minrdocs:mapping --> [teraRabbits](minr_scripts/TeraRabbits/index.md) { data-toc-label="teraRabbits" }
+        - A small implementation of many worldedit + axiom features I like      
+    """
+    
+    out = ""
+    
+    # Loop through folders in minr_scripts
+    for folder in glob.glob("docs/minr_scripts/*"):
+        # Check if folder has an index.md file
+        # if so, open it
+        with open(folder + "/index.md", "r") as f:
+            # It should match the following schema:
+            """ 
+            <!-- minrdocs:mapping -->
+            <!-- minrscript:name Example>
+            <!-- minrscript:description This is an example project!>
+            """
+            # Get the name and description
+            firstline = f.readline().strip()
+            file = f.read()
+            try:
+                name = re.search(r"<!-- minrscript:name (.*) -->", file).group(1)
+            except AttributeError:
+                print(f"Error in {folder}: no name")
+                continue
+            
+            try:
+                description = re.search(r"<!-- minrscript:description (.*) -->", file).group(1)
+            except AttributeError:
+                print(f"Error in {folder}: no description")
+                continue
+            
+            # Create the markdown
+            out += f"### {firstline} [{name}]({folder.removeprefix('docs/')}/index.md) {{ data-toc-label=\"{name}\" }}\n\n"
+            out += f" - {description}\n\n"
 
-    return "<!-- minrdocs:project-list TODO -->"
+    out = on_page_markdown(out, page=page, config=config, files=files)
+    return out
