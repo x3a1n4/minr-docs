@@ -62,7 +62,7 @@ def _badge(icon: str, text: str = "", type: str = ""):
 # Create badge for maps
 def _badge_for_maps(text: str, page: Page, files: Files):
     icon = "material-tag-outline"
-    href = _resolve_path("conventions.md#Mapping", page, files)
+    href = _resolve_path("all_scripts.md#mapping", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Mapping')",
         text = "Mapping",
@@ -72,7 +72,7 @@ def _badge_for_maps(text: str, page: Page, files: Files):
 # Create badge for scripts
 def _badge_for_scripts(text: str, page: Page, files: Files):
     icon = "material-tag-outline"
-    href = _resolve_path("conventions.md#Scripting", page, files)
+    href = _resolve_path("all_scripts.md#scripting", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Scripting')",
         text = "Scripting",
@@ -82,7 +82,7 @@ def _badge_for_scripts(text: str, page: Page, files: Files):
 # Create badge for scripts
 def _badge_for_internal(text: str, page: Page, files: Files):
     icon = "material-tag-outline"
-    href = _resolve_path("conventions.md#Internal", page, files)
+    href = _resolve_path("all_scripts.md#internal", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Internal')",
         text = "Internal",
