@@ -29,3 +29,7 @@ These utilities use functionality external to minr, such as on a website or a do
 ### <!-- minrdocs:github https://github.com/github/docs --> – Github { #github data-toc-label="Github" }
 
 This symbol denotes that a utility has a github. Click on the text to open the github repo.
+
+### <!-- minrdocs:website https://example.com --> – Website { #website data-toc-label="Website" }
+
+This symbol denotes that a utility has a website. Click on the text to open the github repo.
