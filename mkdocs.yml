@@ -1,4 +1,4 @@
-site_name: Minr Docs
+site_name: Minr Player Utilities
 site_url: https://x3a1n4.github.io/minr-docs
 repo_url: https://github.com/x3a1n4/minr-docs
 plugins:
@@ -25,10 +25,9 @@ theme:
       quote: octicons/quote-16
   palette:
     - scheme: default
-  tags:
-    Mapmaking: mapmaking
-    Scripting: scripting
-    Internal: internal
+  features:
+    - content.code.copy
+    - content.code.select    
 not_in_nav: |
   /minr_scripts
 hooks:

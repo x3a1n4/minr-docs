@@ -32,6 +32,9 @@ def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: 
         # Tag to indicate a utility has a github page
         elif type == "github":    return _badge_for_github(args, page, files)
 
+        # Just display text, bypass the badge replacement above
+        elif type == "display":     return _display_badge(args, page, files)
+
         # Otherwise, raise an error
         raise RuntimeError(f"Unknown shortcode: {type}")
 
@@ -128,6 +131,11 @@ def _badge_for_github(text: str, page: Page, files: Files):
         text = f"[Github]({text})",
         type = "github"
     )
+
+# display
+def _display_badge(text: str, page: Page, files: Files):
+    return f"<!-- minrdocs:{text} -->"
+
 
 # -----------------------------------------------------------------------------
     

@@ -12,3 +12,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+.breakword code{
+    white-space : pre-wrap !important;
+}
