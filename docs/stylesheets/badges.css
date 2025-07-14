@@ -16,7 +16,25 @@
 .md-typeset .minr-docs-badge--internal {
   --md-typeset-a-color: rgb(41, 41, 41);
   --md-accent-fg-color: rgb(41, 41, 41);
-  --md-accent-fg-color--transparent: rgba(54, 54, 54, 0.1);
+  --md-accent-fg-color--transparent: rgba(54, 54, 54, 0.3);
+  color: rgb(41, 41, 41);
+}
+.md-typeset .minr-docs-badge--msc {
+  --md-typeset-a-color: rgb(219, 137, 0);
+  --md-accent-fg-color: rgb(122, 88, 20);
+  --md-accent-fg-color--transparent: rgba(219, 137, 0, 0.3);
+  color: rgb(219, 137, 0);
+}
+.md-typeset .minr-docs-badge--non-msc {
+  --md-typeset-a-color: rgb(113, 28, 182);
+  --md-accent-fg-color: rgb(113, 28, 182);
+  --md-accent-fg-color--transparent: rgba(113, 28, 182, 0.3);
+  color: rgb(113, 28, 182);
+}
+.md-typeset .minr-docs-badge--github {
+  --md-typeset-a-color: rgb(41, 41, 41);
+  --md-accent-fg-color: rgb(41, 41, 41);
+  --md-accent-fg-color--transparent: rgba(54, 54, 54, 0.3);
   color: rgb(41, 41, 41);
 }
 .md-typeset .minr-docs-badge--right {

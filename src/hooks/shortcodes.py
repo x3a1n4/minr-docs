@@ -16,12 +16,21 @@ def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: 
         
         # Generate project list from files
         if type == "projectlist":      return _show_project_list(args, page, config, files)
-        # Tag to indicate a namespace is designed for mapmakers, scripters, or internal
+        
+        # Tag to indicate a utility is designed for mapmakers, scripters, or internal
         elif type == "mapping":    return _badge_for_maps(args, page, files)
-        # Tag to indicate a namespace is designed for 
+        # Tag to indicate a utility is designed for 
         elif type == "scripting":    return _badge_for_scripts(args, page, files)
         # Tag to indicate a class/method should not be used
         elif type == "internal":    return _badge_for_internal(args, page, files)
+        
+        # Tag to indicate a utility has msc namespaces
+        elif type == "msc":    return _badge_for_msc(args, page, files)
+        # Tag to indicate a utility has external tools
+        elif type == "non_msc":    return _badge_for_non_msc(args, page, files)
+        
+        # Tag to indicate a utility has a github page
+        elif type == "github":    return _badge_for_github(args, page, files)
 
         # Otherwise, raise an error
         raise RuntimeError(f"Unknown shortcode: {type}")
@@ -62,8 +71,8 @@ def _badge(icon: str, text: str = "", type: str = ""):
 # Note: change conventions.md to something better
 # Create badge for maps
 def _badge_for_maps(text: str, page: Page, files: Files):
-    icon = "material-tag-outline"
-    href = _resolve_path("all_scripts.md#mapping", page, files)
+    icon = "material-pine-tree"
+    href = _resolve_path("tags.md#mapping", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Mapping')",
         text = "Mapping",
@@ -72,22 +81,52 @@ def _badge_for_maps(text: str, page: Page, files: Files):
     
 # Create badge for scripts
 def _badge_for_scripts(text: str, page: Page, files: Files):
-    icon = "material-tag-outline"
-    href = _resolve_path("all_scripts.md#scripting", page, files)
+    icon = "material-code-tags"
+    href = _resolve_path("tags.md#scripting", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Scripting')",
         text = "Scripting",
         type = "script"
     )
     
-# Create badge for scripts
+# Create badge for internal
 def _badge_for_internal(text: str, page: Page, files: Files):
     icon = "material-tag-outline"
-    href = _resolve_path("all_scripts.md#internal", page, files)
+    href = _resolve_path("tags.md#internal", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Internal')",
         text = "Internal",
         type = "internal"
+    )
+    
+# Create badge for msc
+def _badge_for_msc(text: str, page: Page, files: Files):
+    icon = "material-cube"
+    href = _resolve_path("tags.md#msc", page, files)
+    return _badge(
+        icon = f"[:{icon}:]({href} 'msc')",
+        text = "msc",
+        type = "msc"
+    )
+
+# Create badge for non-msc tool
+def _badge_for_non_msc(text: str, page: Page, files: Files):
+    icon = "material-cube-off"
+    href = _resolve_path("tags.md#non-msc", page, files)
+    return _badge(
+        icon = f"[:{icon}:]({href} 'Non-msc')",
+        text = "Non-msc",
+        type = "non-msc"
+    )
+
+# Create badge for github
+def _badge_for_github(text: str, page: Page, files: Files):
+    icon = "simple-github"
+    href = _resolve_path("tags.md#github", page, files)
+    return _badge(
+        icon = f"[:{icon}:]({href} 'Github')",
+        text = f"[Github]({text})",
+        type = "github"
     )
 
 # -----------------------------------------------------------------------------
@@ -98,8 +137,15 @@ def _show_project_list(text: str, page: Page, config: MkDocsConfig, files: Files
     # For each folder in minr_scripts
     # Create the following (example)
     """
-    ### <!-- minrdocs:mapping --> [teraRabbits](minr_scripts/TeraRabbits/index.md) { data-toc-label="teraRabbits" }
-        - A small implementation of many worldedit + axiom features I like      
+    <div class="utility-header" markdown>
+    ## **[TeraRabbits](minr_scripts/TeraRabbits/index.md)**
+    </div>
+    <div class="utility-info" markdown>
+    eggshell
+    </div>
+    <div class="utility-tags" markdown>
+    <!-- minrdocs:mapping --> <!-- minrdocs:msc --> <!-- minrdocs:github https://github.com/x3a1n4/minr -->
+    </div>
     """
     
     out = ""
@@ -130,9 +176,25 @@ def _show_project_list(text: str, page: Page, config: MkDocsConfig, files: Files
                 print(f"Error in {folder}: no description")
                 continue
             
+            try:
+                author = re.search(r"<!-- minrscript:author (.*) -->", file).group(1)
+            except AttributeError:
+                print(f"Error in {folder}: no author")
+                continue
+            
             # Create the markdown
-            out += f"### {firstline} [{name}]({folder.removeprefix('docs/')}/index.md) {{ data-toc-label=\"{name}\" }}\n\n"
-            out += f" - {description}\n\n"
+            out += f"""
+<div class="utility-header" markdown>
+## **[{name}]({folder.removeprefix('docs/')}/index.md)**
+</div>
+<div class="utility-info" markdown>
+{author}
+</div>
+<div class="utility-tags" markdown>
+{firstline}
+</div>
+ - {description}
+            """
 
     out = on_page_markdown(out, page=page, config=config, files=files)
     return out

@@ -1,5 +1,6 @@
-<!-- minrdocs:scripting -->
-<!-- minrscript:name stringHashMap -->
+<!-- minrdocs:scripting --> <!-- minrdocs:msc --> <!-- minrdocs:github https://github.com/x3a1n4/minr -->
+<!-- minrscript:name StringHashMap -->
+<!-- minrscript:author eggshells -->
 <!-- minrscript:description A small implementation of string:string hashmaps in minr -->
 
 # String Hash Map

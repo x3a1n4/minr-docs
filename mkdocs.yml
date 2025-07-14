@@ -2,7 +2,6 @@ site_name: Minr Docs
 site_url: https://x3a1n4.github.io/minr-docs
 repo_url: https://github.com/x3a1n4/minr-docs
 plugins:
-  - tags
   - search
 theme:
   name: material
@@ -31,12 +30,12 @@ theme:
     Scripting: scripting
     Internal: internal
 not_in_nav: |
-  /tags.md
   /minr_scripts
 hooks:
   - src/hooks/shortcodes.py
 extra_css:
   - stylesheets/badges.css
+  - stylesheets/global.css
 markdown_extensions:
   - attr_list
   - def_list
