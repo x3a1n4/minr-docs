@@ -6,7 +6,7 @@
 # String Hash Map
 This is an implementation of string:string hashmaps in minr.
 
-Example Code
+Example Code (copied from `tests()`)
 
 ``` minr
 @using stringHashMap
@@ -27,8 +27,8 @@ Example Code
 
 | Class                                        | Description                                       |
 | -------------------------------------------- | ------------------------------------------------- |
-| [`SHashMap`](./SHashMap.md)                  | The string hash map object                        |
-| `KeyValuePair`                               | A structure that holds associated keys and values |
+| **[`SHashMap`](./SHashMap.md)**              | The string hash map object                        |
+| **[`KeyValuePair`](./KeyValuePair.md)**      | A structure that holds associated keys and values |
 | <!-- minrdocs:internal --> `KVPArrayWrapper` | A structure that holds an array of `KeyValuePair` |
 
 ## Functions

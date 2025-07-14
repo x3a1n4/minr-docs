@@ -1,11 +1,11 @@
 # SHashMap
-This class offers all the hashmap functionality
+This class offers all the hashmap functionality. Hash collisions are handled with separate chaining.
 
 ## Fields
-| Field                                                  | Description                                         |
-| ------------------------------------------------------ | --------------------------------------------------- |
-| <!-- minrdocs:internal --> `KVPArrayWrapper[] hashMap` | The variable that the hashmap is actually stored in |
-| `String[] keys`                                        | All keys saved in the hashmap                       |
+| Field                                                  | Description                                                                                       |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| <!-- minrdocs:internal --> `KVPArrayWrapper[] hashMap` | The variable that the hashmap is actually stored in.                                              |
+| `String[] keys`                                        | All keys saved in the hashmap. Shouldn't be written to directly, but can be iterated over freely. |
 
 ## Constructors
 | Constructor  | Description              |
