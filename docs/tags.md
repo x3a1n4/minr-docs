@@ -26,10 +26,14 @@ These utilities use functionality external to minr, such as on a website or a do
 
 ## Other
 
+### <!-- minrdocs:core --> – Core { #core data-toc-label="Core" }
+
+Core utilities are time-tested and reputable, with minimal downsides when it comes to using them. These utilities can only call functions from _other_ <!-- minrdocs:core --> utilities or themselves. They're also high-quality and worth checking out!
+
 ### <!-- minrdocs:github https://github.com/github/docs --> – Github { #github data-toc-label="Github" }
 
 This symbol denotes that a utility has a github. Click on the text to open the github repo.
 
 ### <!-- minrdocs:website https://example.com --> – Website { #website data-toc-label="Website" }
 
-This symbol denotes that a utility has a website. Click on the text to open the github repo.
+This symbol denotes that a utility has a website. Click on the text to open it.

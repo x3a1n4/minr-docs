@@ -34,8 +34,13 @@ def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: 
         # Tag to indicate a utility has a webpage
         elif type == "website":    return _badge_for_website(args, page, files)
 
+        # Tag to indicate is core
+        elif type == "core":    return _badge_for_core(args, page, files)
+
         # Just display text, bypass the badge replacement above
         elif type == "display":     return _display_badge(args, page, files)
+
+
 
         # Otherwise, raise an error
         raise RuntimeError(f"Unknown shortcode: {type}")
@@ -142,6 +147,16 @@ def _badge_for_website(text: str, page: Page, files: Files):
         icon = f"[:{icon}:]({href} 'Website')",
         text = f"[Website]({text})",
         type = "website"
+    )
+
+# Create badge for website
+def _badge_for_core(text: str, page: Page, files: Files):
+    icon = ":octicons-sparkles-fill-24:"
+    href = _resolve_path("tags.md#core", page, files)
+    return _badge(
+        icon = f"[:{icon}:]({href} 'Core')",
+        text = "Core",
+        type = "core"
     )
 
 # display

@@ -1,4 +1,4 @@
-# How to Document Your Project
+# How to Document Your Utility
 
 ## Why Should I do This?
 
