@@ -27,9 +27,9 @@ theme:
     - scheme: default
   features:
     - content.code.copy
-    - content.code.select    
-not_in_nav: |
-  /minr_scripts
+    - content.code.select  
+    - toc.follow 
+    - navigation.top
 hooks:
   - src/hooks/shortcodes.py
 extra_css:
