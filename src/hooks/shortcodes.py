@@ -193,35 +193,35 @@ def _show_project_list(text: str, page: Page, config: MkDocsConfig, files: Files
             # It should match the following schema:
             """ 
             <!-- minrdocs:mapping -->
-            <!-- minrscript:name Example>
-            <!-- minrscript:description This is an example project!>
+            <!-- utilityinfo:name Example>
+            <!-- utilityinfo:description This is an example project!>
             """
             # Get the name and description
             firstline = f.readline().strip()
             file = f.read()
             try:
-                name = re.search(r"<!-- minrscript:name (.*) -->", file).group(1)
+                name = re.search(r"<!-- utilityinfo:name (.*) -->", file).group(1)
             except AttributeError:
                 print(f"Error in {folder}: no utility name!")
                 continue
             
             try:
-                description = re.search(r"<!-- minrscript:description (.*) -->", file).group(1)
+                description = re.search(r"<!-- utilityinfo:description (.*) -->", file).group(1)
             except AttributeError:
                 print(f"Error in {folder}: no description!")
                 continue
             
             try:
-                author = re.search(r"<!-- minrscript:author (.*) -->", file).group(1)
+                author = re.search(r"<!-- utilityinfo:author (.*) -->", file).group(1)
             except AttributeError:
                 print(f"Error in {folder}: no author!")
                 continue
             
             dependencies = "None"
             try:
-                dependencies = re.search(r"<!-- minrscript:dependencies (.*) -->", file).group(1)
+                dependencies = re.search(r"<!-- utilityinfo:dependencies (.*) -->", file).group(1)
             except AttributeError:
-                if not re.search(r"<!-- minrscript:no_dependencies -->", file):
+                if not re.search(r"<!-- utilityinfo:no_dependencies -->", file):
                     print(f"Error in {folder}: dependancies tag missing!")
                     continue
             
