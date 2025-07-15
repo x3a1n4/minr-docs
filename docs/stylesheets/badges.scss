@@ -48,6 +48,24 @@
       color: rgb(113, 28, 182);
     }
 
+    // Badge for core
+    &--core {
+
+      --md-typeset-a-color:              rgb(41, 41, 41);
+      --md-accent-fg-color:              rgb(41, 41, 41);
+      --md-accent-fg-color--transparent: rgb(41, 41, 41, 0);
+      
+      background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) padding-box,
+                  linear-gradient(90deg,rgba(247, 171, 171, 0.7) 0%, rgba(250, 245, 110, 0.7) 31%, rgba(135, 210, 218, 0.7) 69%, rgba(194, 149, 240, 0.7) 100%) border-box;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      padding: 1px;
+      padding-left: 2px;
+      padding-top: 2px;
+      // color: linear-gradient(90deg,rgba(247, 171, 171, 1) 0%, rgba(250, 245, 110, 1) 31%, rgba(135, 210, 218, 1) 69%, rgba(194, 149, 240, 1) 100%);
+      color: rgb(41, 41, 41)
+    }
+
     // Badge for github
     &--github {
       --md-typeset-a-color:              rgb(41, 41, 41);
@@ -55,6 +73,15 @@
       --md-accent-fg-color--transparent: rgba(54, 54, 54, 0.3);
 
       color: rgb(41, 41, 41);
+    }
+
+    // Badge for website
+    &--website {
+      --md-typeset-a-color:              rgb(15, 74, 109);
+      --md-accent-fg-color:              rgb(15, 74, 109);
+      --md-accent-fg-color--transparent: rgba(15, 74, 109, 0.3);
+
+      color: rgb(15, 74, 109);
     }
 
     // Badge moved to the right

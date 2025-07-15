@@ -151,7 +151,7 @@ def _badge_for_website(text: str, page: Page, files: Files):
 
 # Create badge for website
 def _badge_for_core(text: str, page: Page, files: Files):
-    icon = ":octicons-sparkles-fill-24:"
+    icon = "octicons-sparkles-fill-24"
     href = _resolve_path("tags.md#core", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Core')",

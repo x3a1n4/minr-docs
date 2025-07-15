@@ -30,6 +30,10 @@ These utilities use functionality external to minr, such as on a website or a do
 
 Core utilities are time-tested and reputable, with minimal downsides when it comes to using them. These utilities can only call functions from _other_ <!-- minrdocs:core --> utilities or themselves. They're also high-quality and worth checking out!
 
+!!! note "Why does this exist?"
+
+    Ideally, _every_ utility gets documented here, even if it's a first project and doesn't work 100% (heck, _especially_ if it's a first project, often new players have incredibly novel and interesting ideas and they deserve to be seen!) This tag allows the barrier of entry on these docs to stay open for everyone. 
+
 ### <!-- minrdocs:github https://github.com/github/docs --> – Github { #github data-toc-label="Github" }
 
 This symbol denotes that a utility has a github. Click on the text to open the github repo.
