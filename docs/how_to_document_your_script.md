@@ -17,8 +17,8 @@ If so, other people are going to want to use your script! This is the place to t
 
 - Install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - [Fork this repo](https://github.com/x3a1n4/minr-docs/fork)
-- Add a folder in `./docs/minr_scripts`
-- Add file `index.md` to your folder. This is the default landing page for your utility.
+- Add a folder in `./docs/minr_scripts`. Name it something representing your project (usually, the namespace used)
+- Add a file `index.md` to your folder. This is the default landing page for your utility!
 - Ensure that your `index.md` file starts similar to the following:
 
 <div class="annotate breakword" markdown>
@@ -36,15 +36,21 @@ If so, other people are going to want to use your script! This is the place to t
 4.  This is a comma separated list of all the projects your utility uses as a dependancy. Leave as `<!-- utilityinfo:no_dependencies -->` if your namespace does not use anything else! **This is not currently shown on the docs.** 
 5.  This is what your utility does. Try to keep it short if possible, so that it fits on the [All Utilities](./all_scripts.md) list
 
-- Check that everything looks good by running `mkdocs serve` and navigating to [localhost:8000](localhost:8000)
+!!! note "What does this code block mean?"
 
-!!! note "**PermissionError**: [WinError 10013]"
+    This is an example custom header, with something similar specified at the top of all utility `index.md` files. **_You should never need to modify files outside of your utility documentation folder_**. Instead, all the info presented in [All Utilities](./all_scripts.md) is generated on build.
+
+    To learn more, click the :material-arrow-right-circle: symbols in the block above!
+
+- Check that everything looks good by running `mkdocs serve` from the top-level `./minr-docs` folder. Navigate to [localhost:8000](localhost:8000) to view your documentation!
+
+!!! warning "**PermissionError**: [WinError 10013]"
 
     I ran into this when building this. Poking around, it seemed like there was _already_ something on my 8000 port, and so it was throwing this rather unhelpful error message. Hosting it on a different port with `mkdocs serve -a localhost:XXXX` worked for me.
 
-- Create a pull request 
-- DM or ping me on discord `@billy bobby joey` since that is _unfortunately_ where I'm most active. If this step gets deleted, it's because I've set up a discord server with a webhook to ping me every time a PR gets made. 
+- [Create a pull request](https://github.com/x3a1n4/minr-docs/pulls)
+- DM or ping me on discord `@billy bobby joey` (since that is _unfortunately_ where I'm most active). <sub>If this step gets deleted, it's because I've set up a discord server with a webhook or something. Tell me I need to get on that.</sub> 
 
-??? note "Have Loads of Documentation?"
+??? note "Have tons of documentation?"
 
     If you have a lot of documentation to add, consider asking me to become a collaborator to the repo! It'll save a bunch of hassle.

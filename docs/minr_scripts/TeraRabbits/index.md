@@ -2,7 +2,7 @@
 <!-- utilityinfo:name TeraRabbits -->
 <!-- utilityinfo:author eggshells -->
 <!-- utilityinfo:dependencies StringHashMap -->
-<!-- utilityinfo:description Minr scripts for many worldedit + axiom features I like -->
+<!-- utilityinfo:description A bundle of Minr scripts to replicate the most useful bits of worldedit + axiom. Often updated. -->
 
 ![Image title](images/thisisalsoaheaderimage.png){ align=left }
 

@@ -40,4 +40,4 @@ This symbol denotes that a utility has a github. Click on the text to open the g
 
 ### <!-- minrdocs:website https://example.com --> – Website { #website data-toc-label="Website" }
 
-This symbol denotes that a utility has a website. Click on the text to open it.
+This symbol denotes that a utility has a website. Click on the text to open the site.
