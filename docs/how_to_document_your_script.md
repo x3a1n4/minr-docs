@@ -16,7 +16,7 @@ If so, other people are going to want to use your script! This is the place to t
 ## How Do I do This?
 
 - Install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
-- Fork [this repo](https://github.com/x3a1n4/minr-docs)
+- [Fork this repo](https://github.com/x3a1n4/minr-docs/fork)
 - Add a folder in `./docs/minr_scripts`
 - Add file `index.md` to your folder. This is the default landing page for your utility.
 - Ensure that your `index.md` file starts similar to the following:
@@ -43,6 +43,6 @@ If so, other people are going to want to use your script! This is the place to t
 - Create a pull request 
 - DM or ping me on discord `@billy bobby joey` since that is _unfortunately_ where I'm most active. If this step gets deleted, it's because I've set up a discord server with a webhook to ping me every time a PR gets made. 
 
-!!! note "Advanced: Using Submodules"
+??? note "Have Loads of Documentation?"
 
-    If you want to host the documentation on your own repository, you can achieve this with a _subrepository_. I'm not entirely sure how to do this, but check out [this submodules explanation](https://gist.github.com/gitaarik/8735255) and [this folder explanation](https://gist.github.com/ZhuoyunZhong/2c08c8549616e03b7f508fea64130558) for more info. I'll try to throw up a proper explanation later.
+    If you have a lot of documentation to add, consider asking me to become a collaborator to the repo! It'll save a bunch of hassle.
