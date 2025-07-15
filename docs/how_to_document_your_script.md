@@ -23,16 +23,18 @@ If so, other people are going to want to use your script! This is the place to t
 
 <div class="annotate breakword" markdown>
 ```md
-<!-- minrdocs:display scripting --> <!-- minrdocs:display msc --> <!-- minrdocs:display github https://github.com/x3a1n4/minr --> (1)
-<!-- minrscript:name StringHashMap --> (2)
+<!-- minrdocs:display mapping --> <!-- minrdocs:display msc --> <!-- minrdocs:display github https://github.com/x3a1n4/minr --> (1)
+<!-- minrscript:name TeraRabbits --> (2)
 <!-- minrscript:author eggshells --> (3)
-<!-- minrscript:description A small implementation of string:string hashmaps in minr --> (4)
+<!-- minrscript:dependencies StringHashMap --> (4)
+<!-- minrscript:description A bundle of Minr scripts to replicate the most useful bits of worldedit + axiom. Often updated. --> (5)
 ```
 </div>
 1.  These are the tags shown at the top of the page and on the list in [All Utilities](./all_scripts.md). For the full list of tags, see the [Tags](./tags.md) page or its [source code](https://github.com/x3a1n4/minr-docs/blob/main/docs/tags.md?plain=1)
 2.  This is the name of your utility. It will show up as this in the utility list on [All Utilities](./all_scripts.md)
 3.  This is you! It can also include anyone who contributed, or anything at all. This shows up as the author on [All Utilities](./all_scripts.md)
-4.  This is what your utility does. Try to keep it short if possible, so that it fits on the [All Utilities](./all_scripts.md) list
+4.  This is a comma separated list of all the projects your utility uses as a dependancy. Leave as `<!-- minrscript:no_dependencies -->` if your namespace does not use anything else! **This is not currently shown on the docs.** 
+5.  This is what your utility does. Try to keep it short if possible, so that it fits on the [All Utilities](./all_scripts.md) list
 
 - Check that everything looks good by running `mkdocs serve` and navigating to [localhost:8000](localhost:8000)
 

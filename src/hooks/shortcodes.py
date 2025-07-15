@@ -202,22 +202,31 @@ def _show_project_list(text: str, page: Page, config: MkDocsConfig, files: Files
             try:
                 name = re.search(r"<!-- minrscript:name (.*) -->", file).group(1)
             except AttributeError:
-                print(f"Error in {folder}: no name")
+                print(f"Error in {folder}: no utility name!")
                 continue
             
             try:
                 description = re.search(r"<!-- minrscript:description (.*) -->", file).group(1)
             except AttributeError:
-                print(f"Error in {folder}: no description")
+                print(f"Error in {folder}: no description!")
                 continue
             
             try:
                 author = re.search(r"<!-- minrscript:author (.*) -->", file).group(1)
             except AttributeError:
-                print(f"Error in {folder}: no author")
+                print(f"Error in {folder}: no author!")
                 continue
             
+            dependencies = "None"
+            try:
+                dependencies = re.search(r"<!-- minrscript:dependencies (.*) -->", file).group(1)
+            except AttributeError:
+                if not re.search(r"<!-- minrscript:no_dependencies -->", file):
+                    print(f"Error in {folder}: dependancies tag missing!")
+                    continue
+            
             # Create the markdown
+            #TODO: show dependancies
             out += f"""
 <div class="utility-header" markdown>
 ## **[{name}]({folder.removeprefix('docs/')}/index.md)**
