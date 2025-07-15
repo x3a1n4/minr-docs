@@ -1,0 +1,18 @@
+.utility-info p{
+    margin-top: -6px;
+    margin-bottom: 0px;
+    opacity: 0.5;
+    font-size: 0.9em;
+}
+.utility-tags p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.utility-header h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.breakword code{
+    white-space : pre-wrap !important;
+}
