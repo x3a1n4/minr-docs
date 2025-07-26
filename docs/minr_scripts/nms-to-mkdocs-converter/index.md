@@ -9,7 +9,7 @@
 This is a utility website that generates a documentation structure from an uploaded .nms file. 
 It doesn't do *everything* automatically, but it gets pretty far.
 
-[![Screenshot](images/image.png){ align=left }](https://x3a1n4.github.io/nms-to-md/)
+[![Screenshot](images/image.png)](https://x3a1n4.github.io/nms-to-md/)
 
 ## Features:
 - Generates a file for each class called `[ClassName].md`
