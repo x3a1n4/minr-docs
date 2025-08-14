@@ -12,7 +12,7 @@ This is a small utility namespace to capture entities from selectors. Heavily ba
 ```
 @bypass /execute in minecraft:theta run summon minecraft:rabbit ~ ~ ~ {Glowing:1b, Tags:["eggshellUtilsTest"]}
 
-@define Entity test = entityCapture::getEntityFromSelector("@e[tag=eggshellUtilsTest,limit=1]") (1)
+@define Entity test = entityCapture::getEntityFromSelector("@e[tag=eggshellUtilsTest,limit=1]", "theta") (1)
 
 @player "Got entity {{test}}"
 ```
@@ -24,10 +24,10 @@ This is a small utility namespace to capture entities from selectors. Heavily ba
 
 <div class="annotate breakword" markdown>
 ```
-@define Entity[] rabbits = entityCapture::getAllEntitiesFromSelector("@e[type=minecraft:rabbit]") (1)
+@define Entity[] rabbits = entityCapture::getAllEntitiesFromSelector("@e[type=minecraft:rabbit]", "theta") (1)
 @player "Found all rabbits {{rabbits}}"
 
-@define Entity[] rabbits2 = entityCapture::getAllEntitiesFromSelector("@e[limit=1,type=minecraft:rabbit]") (2)
+@define Entity[] rabbits2 = entityCapture::getAllEntitiesFromSelector("@e[limit=1,type=minecraft:rabbit]", "theta") (2)
 @player "Found only one rabbit {{rabbits2}}"
 ```
 </div>
