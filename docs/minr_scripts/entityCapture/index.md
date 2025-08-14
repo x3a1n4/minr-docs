@@ -38,8 +38,8 @@ This is a small utility namespace to capture entities from selectors. Heavily ba
 ## Functions
 | Function                             | Description                                           |
 | ------------------------------------ | ----------------------------------------------------- |
-| `Entity getEntityFromSelector(String selector)` | Returns an entity from a vanilla selector. Fails if `limit=1` is not provided. |
-| `Entity[] getAllEntitiesFromSelector(String selector)` | Returns a list of all entities matched from the selector. |
-| <!-- minrdocs:internal --> `Int[] getDecUUIDFromSelector(String selector)` | Returns the decimal UUID from a selector. Copy of vprutils::getDecUUID |
+| `Entity getEntityFromSelector(String selector, String world)` | Returns an entity from a vanilla selector in world `world`. Fails if `limit=1` is not provided. |
+| `Entity[] getAllEntitiesFromSelector(String selector, String world)` | Returns a list of all entities matched from the selector in world `world`. |
+| <!-- minrdocs:internal --> `Int[] getDecUUIDFromSelector(String selectorm String world)` | Returns the decimal UUID from a selector. Copy of vprutils::getDecUUID |
 | <!-- minrdocs:internal --> `Void tests()` | Unit tests |
 
